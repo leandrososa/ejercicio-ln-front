@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Container
+
+@include breakpoint(tablet){
+  .container{
+    margin: 0 3rem;
+  }
+}
+
+@include breakpoint(desktop){
+  .container{
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+}
+
+
+// Button
