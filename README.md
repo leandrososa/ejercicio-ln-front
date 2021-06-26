@@ -1,26 +1,36 @@
 # Ejercicio front LN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ejercicio de front-end basado en [Create React App](https://github.com/facebook/create-react-app) con estilos en Sass.
 
-## Available Scripts
+## Iniciar
 
-In the project directory, you can run:
+Para iniciar en modo desarrollo:
 
+### `yarn install`
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Componentes
+### ArticleItem
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Componente de artículo básico con modos regular y author, con los parámetros:
 
-### `yarn build`
+- Regular
+    - Imagen (opcional)
+    - Lead o volanta
+    - Título
+    - Subhead o cuerpo (opcional)
+    - Marquesina o marquee (opcional)
+    - Hipervínculo
+    
+- De autor
+    - Lead o volanta
+    - Título
+    - Avatar de autor
+    - Nombre de autor
+    - Hipervínculo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ArticleContainer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contenedor de artículos con parámetros de título e hipervínculo opcionales.
 
