@@ -1,0 +1,38 @@
+
+@include breakpoint(fromtablet){
+
+    .grid{
+        display: grid;
+        //grid-template-columns: repeat(12, 1fr);
+        column-gap: $gutter-tablet;
+
+        &.left-highlight{
+            grid-template-columns: 8fr 4fr;
+            grid-template-rows: repeat(2, auto);
+
+            article:first-child{
+                grid-row: 1 / span 2;
+            }
+        }
+        
+        &.half{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.three-rows{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.most-read{
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+}
+
+@include breakpoint(desktop){
+    .grid{
+        column-gap: $gutter-desktop;
+    }
+}
