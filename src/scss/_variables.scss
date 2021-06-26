@@ -4,16 +4,17 @@
 
 $light-blue: #0074C4;
 $yellow:     #ffff24;
-$grey:       #ccc;
 
 $n-50:       #fefefe;
 $n-400:      #ccc;
+$n-700:      #333333;
 $n-800:      #272727;
 $n-900:      #1c1c1f;
 $n:          #000;
 
 $wh:         #fff;
-$bl: $n;
+$grey:       $n-400;
+$bl:         $n;
 
 // Breakpoints
 
@@ -21,14 +22,24 @@ $bl: $n;
     @if $point == desktop {
       @media only screen and (min-width: 1200px) { @content ; }
    }
-    @else if $point == tablet {
-      @media only screen and (max-width: 1199px) and (min-width: 321px) { @content ; }
+    @else if $point == fromtablet {
+      @media only screen and (min-width: 769px) { @content ; }
    }
+    @else if $point == tablet {
+      @media only screen and (max-width: 1199px) and (min-width: 769px) { @content ; }
+  } 
      @else if $point == mobile {
-      @media only screen and (max-width: 320px) { @content ; }
+      @media only screen and (max-width: 768px) { @content ; }
    }
  }
  
 // Spacing
 
-$base-font-size: 12px;
+$base-font-size: 16px;
+
+$gutter-tablet: 1rem;
+$gutter-desktop: 2.5rem;
+
+// Fonts
+
+$sueca: 'Sueca Slab', sans-serif;

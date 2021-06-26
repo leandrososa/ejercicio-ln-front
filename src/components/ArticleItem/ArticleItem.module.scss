@@ -1,3 +1,182 @@
+@import '../../scss/variables';
+
 .ArticleItem {
-    display: block
+    
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        filter: brightness(1.1);
+    }
+
+    &.Author{
+        border: 1px solid $grey;
+        margin: 0 0 2rem 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 5rem;
+            height: 1px;
+            bottom: -1px;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: $bl;
+        }
+
+        h3{
+            text-align: center;
+            margin: 1rem;
+        }
+
+    }
+
+    a{
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        text-decoration: none;
+    }
+
+    .Image{
+        border: 1px solid $grey;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h3{
+        font-family: $sueca;
+        font-size: 1.250rem;
+        line-height: 1.75rem;
+        margin: .5rem 0;
+        color: $n-900;
+
+
+        em{
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            color: $light-blue
+        }
+    }
+
+    p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 0 0 .5rem 0;
+        color: $n-700;
+        
+        a{
+            color: inherit;
+        }
+    }
+
+    div{
+        font-size: 0.875rem;
+        color: $n-800;
+
+        a, a b{
+            font-size: inherit;
+            font-weight: 700;
+            color: inherit;
+        }
+    }
+
+    .AuthorData{
+        text-align: center;
+        margin-bottom: 1rem;
+
+        img{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 1px solid $grey;
+            margin-bottom: .5rem;
+        }
+
+        b{
+            font-weight: bold;
+        }
+    }
+
+}
+
+@include breakpoint(mobile){
+    .ArticleItem{
+        &.Author{
+            margin: 0 1rem 2rem 1rem;
+        }
+
+        h3{
+            margin: .5rem 1rem;
+        }
+    
+        p{
+            margin: 0 1rem .5rem 1rem;
+        }
+        div{
+            margin: 0 1rem;
+        }
+
+        
+    }
+    
+}
+
+@include breakpoint(fromtablet){
+    .ArticleItem{
+        &.Highlight{
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid $grey;
+            padding-right: $gutter-desktop;
+
+            h3{
+                margin-top: 0;
+                font-weight: bold;
+                font-size: 2rem;
+                line-height: 2.5rem;
+
+                a{
+                    font-weight: inherit;
+
+                    em{
+                        color: inherit;
+                        font-weight: inherit;
+                    }
+                }
+            }
+
+            & > a{
+                order: 9;
+
+                img{
+                    margin-top: 1rem;
+                }
+            }
+        }
+        &.Half{
+            h3{
+                font-size: 1.5rem;
+                line-height: 2rem;
+                font-weight: 700;
+                
+                a{
+                    font-weight: inherit;
+                    line-height: inherit;
+
+                    em{
+                        font-weight: inherit;
+                    }
+                }
+            }
+        }
+    }
 }

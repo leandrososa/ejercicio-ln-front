@@ -1,3 +1,8 @@
+html{
+  
+  font-size: $base-font-size;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -11,7 +16,7 @@ body {
 
 @include breakpoint(tablet){
   .container{
-    margin: 0 3rem;
+    margin: 0 1.250rem;
   }
 }
 
