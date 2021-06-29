@@ -5,7 +5,7 @@ import styles from './ArticleItem.module.scss';
 import defaultAuthor from '../../assets/img/default-author.png'
 
 const ArticleItem = (props) => (
-  <article className={styles.ArticleItem + `${props.type === "author" ? ' ' + styles.Author : ""}` + `${props.highlight ? ' ' + styles.Highlight : ""}` + `${props.half ? ' ' + styles.Half : ""}`}>
+  <article className={styles.ArticleItem + `${props.type === "author" ? ' ' + styles.Author : ""}${props.highlight ? ' ' + styles.Highlight : ""}${props.half ? ' ' + styles.Half : ""}`}>
     { props.img && 
       <a href={props.url}>
         <img
